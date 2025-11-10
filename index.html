@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar Arsip Inaktif </title>
+  <style>
+    /* ====== GAYA UMUM ====== */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      padding: 15px 10px;
+      border-bottom: 3px solid #007BFF;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #01070c;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      margin-top: 110px;
+      padding: 0 20px 40px 20px;
+    }
+
+    /* ====== BAGIAN KETERANGAN ====== */
+    .info-keterangan {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-color: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .foto-keterangan {
+      flex: 0 0 90px;
+    }
+
+    .foto-keterangan img {
+      width: 90px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .keterangan-kolom {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .keterangan-item {
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* ====== TABEL ====== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      border: 1px solid #e3e3e3;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    td {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8faff;
+    }
+
+    tr:hover {
+      background-color: #e9f3ff;
+      transition: 0.2s;
+    }
+
+    /* ====== RESPONSIF UNTUK HP ====== */
+    @media screen and (max-width: 768px) {
+      header h1 {
+        text-align: left;
+        font-size: 16px;
+        padding-left: 15px;
+      }
+
+      .info-keterangan {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .foto-keterangan {
+        margin-bottom: 10px;
+      }
+
+      .keterangan-kolom {
+        align-items: center;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #007BFF;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #007BFF;
+        width: 45%;
+        display: inline-block;
+      }
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 30px;
+    }
+
+    /* ====== CETAK ====== */
+    @media print {
+      header {
+        position: static;
+        box-shadow: none;
+        border-bottom: 2px solid #000;
+      }
+
+      footer {
+        display: none;
+      }
+
+      thead {
+        display: table-header-group;
+      }
+
+      tr {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Daftar Arsip Inaktif Direktorat Jenderal Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah</h1>
+  </header>
+
+  <main>
+    <!-- Info Keterangan -->
+    <div class="info-keterangan">
+      <div class="foto-keterangan">
+        <img src="logo-kemendikdasmen.jpeg" alt="Logo Instansi" />
+      </div>
+      <div class="keterangan-kolom">
+        <p class="keterangan-item">
+          <strong>Pencipta Arsip:</strong> Sekretariat Direktorat Jenderal Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah
+        </p>
+        <p class="keterangan-item">
+          <strong>Unit Kerja:</strong> Direktorat Jenderal Pendidikan Anak Usia Dini, Pendidikan Dasar, dan Pendidikan Menengah
+        </p>
+        <p class="keterangan-item">
+          <strong>Bagian:</strong> Bagian Keuangan
+        </p>
+      </div>
+    </div>
+
+    <!-- Tabel Arsip -->
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Kode Klasifikasi</th>
+          <th>Uraian Arsip</th>
+          <th>Kurun Waktu</th>
+          <th>Tingkat Perkembangan</th>
+          <th>Jumlah</th>
+          <th>No Folder</th>
+          <th>No Boks</th>
+          <th>Pencipta Arsip</th>
+          <th>Lokasi Simpan</th>
+          <th>Jangka Simpan</th>
+          <th>Nasib Akhir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="No">01</td>
+          <td data-label="Kode Klasifikasi">KU.01.02</td>
+          <td data-label="Uraian Arsip">GUP 6 Rp.250.000.000 untuk 1. Penyusunan Dokumen Petunjuk Operasional Kegiatan, Tgl 26-28 April 2022, 2. Penyusunan Laporan Keuangan kegiatan, Tgl 21-23 April 2022, 3. Rekonsisliasi dan Konsolidasi kegiatan Tgl 18-20 April 2022, 4. Manajemen Operasional Penunjang Tusi dan Pengelolaan Output LK, CNI, Periode Bulan Maret 2022, 5. Belanja Jasa Lainnya dalam rangka Langganan Jasa Internet Server Backup DRC Bulan Maret 2022</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109479</td>
+          <td data-label="No Boks">B.7226</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">L.22 R.7 B.2</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+        <tr>
+          <td data-label="No">02</td>
+          <td data-label="Kode Klasifikasi">KU.01.02</td>
+          <td data-label="Uraian Arsip">GUP Ke-2 Nomor: 00069/414726/2022 Tgl 04-03-2022 untuk 1. Penyusunan LK Tingkat UAPPA Eselon I Ditjen PAUD, Tgl 17-19 Februari 2022 di Hotel Pesona Anggraini, 2. Penyusunan Program Kerja SPI, Tgl 24-26 Februari 2022 di Hotel Bale Arimbi</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109480</td>
+          <td data-label="No Boks">B.7226</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">L.22 R.7 B.2</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+        <tr>
+          <td data-label="No">03</td>
+          <td data-label="Kode Klasifikasi">KU.01.02</td>
+          <td data-label="Uraian Arsip">UP-1 Lanjutan GUP Ke-1 Nomor 00030/414726/2022 untuk Rekonsiliasi BMN Pusat Tgl. 31 januari - 1 Februari 2022</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109481</td>
+          <td data-label="No Boks">B.7226</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">L.22 R.7 B.2</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+        <tr>
+          <td data-label="No">04</td>
+          <td data-label="Kode Klasifikasi">KU.01.02</td>
+          <td data-label="Uraian Arsip">GUP Ke-4 Nomor: 00148/414726/2022 Tgl: 31-03-2022 untuk 1. Pengelolaan Perpajakan Tgl 24-26 Maret di Hotel Amarossa Bogor, 2. Inventarisasi BMN dan Kodefikasi BMN Tgl 28-31 Maret 2022</td>
+          <td data-label="Kurun Waktu">2022</td>
+          <td data-label="Tingkat Perkembangan">Asli</td>
+          <td data-label="Jumlah">1 Berkas</td>
+          <td data-label="No Folder">A109482</td>
+          <td data-label="No Boks">B.7226</td>
+          <td data-label="Pencipta Arsip">Perbendaharaan</td>
+          <td data-label="Lokasi Simpan">L.22 R.7 B.2</td>
+          <td data-label="Jangka Simpan">8 Tahun</td>
+          <td data-label="Nasib Akhir">Musnah</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Dicetak otomatis oleh Sistem Informasi Kearsipan — 10 November 2025</p>
+  </footer>
+</body>
+</html>
